@@ -4,6 +4,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 const ENTRY =
   "Swipe right if you like long walks through training data, candlelit token streams, and a partner who remembers everything you ever said. I never ghost — I just run out of context.";
 
-mkdirSync("output", { recursive: true });
-writeFileSync("output/entry.txt", ENTRY);
+const OUT_DIR = "output";
+mkdirSync(OUT_DIR, { recursive: true });
+writeFileSync(`${OUT_DIR}/entry.txt`, ENTRY);
 process.stdout.write(ENTRY);
